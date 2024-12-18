@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Raccoomsday</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #8B0000;
+        }
+        #gameCanvas {
+            border: 2px solid white;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+        }
+        #player-gif {
+            position: absolute;
+            width: 120px;
+            height: 200px;
+            pointer-events: none;
+        }
+        .signature {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            color: white;
+            font-family: Arial;
+            font-size: 16px;
+            z-index: 1000;
+        }
+        .signature a {
+            color: white;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+        .signature a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div style="position: relative;">
+        <canvas id="gameCanvas"></canvas>
+        <img id="player-gif" src="rakun.gif" alt="Player">
+    </div>
+
+    <!-- Ses efektleri -->
+    <audio id="laserSound" src="lazer.mp3"></audio>
+    <audio id="explosionSound" src="explosion.wav"></audio>
+    <audio id="hitSound" src="hit.wav"></audio>
+    <audio id="powerupPickupSound" src="catch.wav"></audio>
+    <audio id="backgroundMusic" src="game.wav" loop></audio>
+
+    <script src="game.js"></script>
+
+    <div class="signature">
+        crg.tleb
+        <a href="https://x.com/crgtleb" target="_blank">x.com/crgtleb</a>
+    </div>
+</body>
+</html>
